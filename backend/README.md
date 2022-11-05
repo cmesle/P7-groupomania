@@ -16,5 +16,6 @@ To `run backend` :
 
     in a terminal, get to "backend" directory,
     1- create new directory "images"
-    2- install dependancies: npm install
-    3- run node server
+    2- create a new file ".env", paste and save the data in the deliverable #2 
+    3- install dependancies: npm install
+    4- run node server
