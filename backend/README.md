@@ -5,8 +5,9 @@ Pour `démarrer le backend` :
 
     dans un terminal, accéder au dossier "backend",
     1- créer un dossier "images"
-    2- installer les dépendances: npm install
-    3- lancer node server
+    2- créer un fichier ".env", y coller et enregistrer le contenu du livrable 2
+    3- installer les dépendances: npm install
+    4- lancer node server
 
 
 ## This directory holds the backend of the web application "Groupomania" P7 of the web developer course of Openclassrooms
