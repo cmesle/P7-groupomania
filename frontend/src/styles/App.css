@@ -1,0 +1,79 @@
+html {
+  --primary: #FD2D01;
+  --secondary: #FFD7D7;
+  --tertiary: #4E5166;
+  --body__bg-color: white;
+  background-color: var(--secondary);
+}
+
+* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+body {
+  width: 80%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: auto;
+  font-family: 'Lato';
+  font-size: 16px;
+  color: var(--tertiary);
+  background-color: var(--body__bg-color);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--tertiary);
+}
+a:hover {
+  color: var(--primary);
+}
+
+button {
+  cursor: pointer;
+}
+
+.App {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+  }
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    background-color: unset;
+  }
+  .App {
+    width: 100%;
+    margin: unset;
+  }
+
+    header {
+      width: 100%;
+      margin: unset;
+      padding-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    main {
+      width: 100%;
+      padding: unset;
+      margin-top: 5px;
+      margin-bottom: 50px;
+      border-radius: 10px;
+      background-color: unset;
+      font-size: small;
+    }
+}

@@ -1,0 +1,104 @@
+.toggleForm {
+    margin: 10px 30px;
+    font-size: small;
+    font-weight: normal;
+}
+
+#LoginForm {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+    #LoginFormInputs__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .LoginFormInputs__input {
+            display: flex;
+            flex-direction: column;
+            min-width: 265px;
+            min-height: 85px;
+        }
+            label {
+                margin-right: 3px;
+            }
+            #LoginForm input,
+            #LoginForm .input,
+            #LoginForm textarea {
+                position: relative;
+                right: 0;
+                padding: 5px;
+                border: 1px solid var(--tertiary);
+                border-radius: 5px;
+            }
+            .signup-help {
+                display: flex;
+                justify-content: flex-end;
+                margin: 3px 0;
+                font-size: x-small;
+            }
+            .error-message {
+                margin: unset;
+                font-size: small;
+                color: var(--primary);
+            }
+
+
+        #passwordWrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: unset;
+        }
+            #LoginForm .input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: unset;
+            }
+            .input img {
+                margin-right: 5px;
+                opacity: 50%;
+                width: 20px;
+            }
+
+@media screen and (max-width: 1000px) {
+    .toggleForm {
+        display: block;
+        width: 100%;
+        margin-left: unset;
+        font-size: medium;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    #LoginFormInputs__wrapper {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #LoginForm {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+        #LoginFormInputs__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+            #LoginFormInputs__input {
+                display: flex;
+                flex-direction: column;
+            }
+}

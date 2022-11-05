@@ -1,0 +1,58 @@
+main {
+    flex-grow: 1;
+    padding: 30px 10%;
+}
+
+    a {
+        width: 100%;
+    }
+
+    form {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        border-top: 1px solid var(--tertiary);
+        border-bottom: 1px solid var(--tertiary);
+        border-radius: 10px;
+        background-color: white;
+    }
+        input, .input, textarea {
+            font-family: 'Lato';
+            font-size: medium;
+            color: var(--tertiary);
+        }
+
+    h1 {
+        margin: 10px 0px;
+        font-size: large;
+        font-weight: normal;
+    }
+
+@media screen and (max-width: 992px) {
+    main {
+        width: 100%;
+        padding: 30px 5%;
+        margin-top: 5px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        background-color: unset;
+    }
+    
+    h1 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    #postForm {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: unset;
+    }
+}

@@ -1,0 +1,20 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    width: max-content;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--secondary);
+    font-family: 'Lato';
+    font-size: small;
+    color: var(--tertiary);
+}
+
+button:hover {    
+    color: white;
+    font-weight: bolder;
+    background-color: var(--primary);
+}

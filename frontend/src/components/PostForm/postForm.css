@@ -1,0 +1,97 @@
+#postForm {
+    display: grid;
+    grid-template-rows: 20px 27px 20px 80%;
+    grid-template-columns: 40% 55%;
+    column-gap: 20px;
+}
+
+#postForm__content {
+    grid-area: 1 / 1 / span 4;
+}
+
+    #postForm__content input,
+    #postForm__content .input,
+    #postForm__content textarea {
+        position: relative;
+        right: 0;
+        width: 100%;
+        padding: 5px;
+        border: 1px solid var(--tertiary);
+        border-radius: 5px;
+    }
+
+    #postForm__content textarea {
+        height: 300px;
+        overflow: auto;
+    }
+
+#postForm__buttons {
+    grid-area: 2/2;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    justify-content: space-between;
+    justify-items: right;
+}
+
+    #postForm__image-button {
+        display: grid;
+        grid-template-columns: max-content max-content;
+    }
+
+        #postForm__image-button img {
+            width: 10px;
+        }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: unset;
+        width: max-content;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--secondary);
+        font-size: small;
+    }
+    
+    .button:hover {
+        color: white;
+        font-weight: bolder;
+        background-color: var(--primary);
+    }
+
+#postForm__image {
+    grid-area: 4 / 2;
+    max-height: 300px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 769px) {
+    #postForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+        textarea {
+            height: unset;
+        }
+
+        #postForm__buttons {
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+            #postForm__image-button {
+                display: grid;
+            }
+
+        #postForm__image {
+            grid-area: 4 / 2;
+            max-height: unset;
+            border-radius: 10px;
+            overflow: auto;
+        }
+}

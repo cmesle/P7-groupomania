@@ -1,0 +1,245 @@
+/* @import '../styles/App.css'; */
+
+/* .styledPost {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid var(--tertiary);
+    border-radius: 10px;
+} */
+
+.post-card,
+.post-card--open {
+    position: relative;
+    display: flex;
+    min-height: 150px;
+    overflow: hidden;
+    margin-bottom: -1px;
+    padding: 10px;
+    border-top: 1px solid var(--tertiary);
+    border-bottom: 1px solid var(--tertiary);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.post-card:hover,
+.post-card--open:hover {
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+    .post-card__clickable,
+    .post-card__clickable--open {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        cursor: pointer;
+        --image-width: 140px;
+    }
+    .post-card__clickable--open {
+        flex-direction: column-reverse;
+        --open-image-width: 100%;
+    }
+
+        .post-card__img,
+        .post-card--open .post-card__img {
+            object-fit: cover;
+            width: var(--image-width);
+            max-height: 128px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        .post-card--open .post-card__img {
+            width: var(--open-image-width);
+            max-height: 100%;
+            margin-bottom: 25px;
+        }
+
+        .post__content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            width: calc(100% - var(--image-width) - 10px);
+        }
+        .post__content--open {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+            .post__content p,
+            .post__content--open p {
+                margin: 0;
+            }
+
+            .post__header {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 15px;
+                border-bottom: 1px solid var(--secondary)
+            }
+
+                .post__identity {
+                    display: flex;
+                    width: 80%;
+                    font-weight: bold;
+                }
+                    .post__identity__who-when {
+                        width: 40%;
+                        padding-right: 10px;
+                    }
+                    .post__identity__date {
+                        font-size: x-small;
+                        font-weight: normal;
+                    }
+                    .post__identity__title {
+                        width: 50%;
+                    }
+
+                .post__text,
+                .post__text--open {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 95%;
+                    max-height: 77px;
+                }
+                .post__text--open {
+                    overflow: unset;
+                    white-space: unset;
+                    text-overflow: unset;
+                    max-height: unset;
+                }
+
+        .post__like {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            display: flex;
+            align-items: flex-end;
+            margin: 0;
+            cursor: pointer;
+            font-size: small;
+            font-weight: bold;
+        }
+            .post__like img {
+                width: 20px;
+                margin-right: 5px;
+                border-radius: 0;
+                color: var(--primary);
+            }
+
+        .post__button {
+            position: absolute;
+            right: 10px;
+            display: flex;
+        }
+            .post__button button {
+                width: 57px;
+                padding: 5px;
+                background-color: unset;
+                font-size: x-small;
+                font-weight: bold;
+            }
+            .post__button button:hover {
+                padding: 0px 3px;
+                font-size: small;
+                color: var(--primary);
+            }
+
+            .post__button img {
+                display: none;
+            }
+
+
+@media screen and (max-width: 992px) {
+    .post-card,
+    .post-card--open {
+        min-height: unset;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+        .post-card__clickable {
+            max-height: unset;
+        }
+
+        .post-card__clickable,
+        .post-card__clickable--open {
+            flex-direction: column-reverse;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .post-card .post-card__img,
+        .post-card--open .post-card__img {
+            width: 100%;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+            .post__content {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+                .post__header {
+                    padding-bottom: 5px;
+                }
+
+                    .post__identity {
+                        flex-direction: column;
+                        width: 90%;
+                        font-size: small;
+                    }
+                        .post__identity__who-when {
+                            width: unset;
+                            margin-bottom: 5px;
+                        }
+                        .post__identity__title {
+                            width: unset;
+                            margin-bottom: 5px;
+                        }
+
+                .post__text {
+                    width: 89%;
+                }
+
+            .post__button button {
+                align-items: flex-start;
+                width: 20px;
+                padding: 5px 0 0 5px;
+            }
+
+            .post__button button:hover {
+                padding: 5px 0 0 5px;
+                background-color: unset;
+            }
+
+            .post__button img {
+                display: block;
+                width: 10px;
+                height: 10px;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .post__button img:hover {
+                width: 15px;
+                height: 15px;
+            }
+
+            .post__button span {
+                display: none;
+            }
+
+        .post__like img {
+            width: 15px;
+            margin-right: 3px;
+            border-radius: 0;
+        }
+}
